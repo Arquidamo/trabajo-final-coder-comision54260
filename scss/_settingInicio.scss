@@ -1,0 +1,7 @@
+html{
+    @include seteoInicial();
+}
+
+*{
+    @include margins(0px,0px);
+}

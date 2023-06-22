@@ -1,0 +1,512 @@
+/*helpers*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100&display=swap"); /*estilos*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+} /*paginas*/
+/*barra de navegacion y header*/
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #D8BD8A;
+}
+
+header .logo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+header .logo img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+header .logo h4 {
+  color: #772014;
+}
+
+header .barra {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+  align-items: end;
+}
+
+header .barra a {
+  color: #772014;
+  font-weight: 20%;
+}
+
+header .barra:hover {
+  color: #B3AF8F;
+}
+
+header .barra:visited {
+  color: #2A2D43;
+}
+
+@media (max-width: 480px) {
+  header .barra {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+  }
+  header .barra a {
+    font-size: small;
+    gap: 3px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  header .barra {
+    gap: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: end;
+  }
+  header .barra a {
+    font-size: medium;
+    gap: 20px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) and (min-width: 900px) {
+  header header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 60px;
+  }
+  header header .barra {
+    gap: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: end;
+  }
+  header header .barra a {
+    font-size: larger;
+  }
+}
+.principal {
+  height: calc(100vh - 120px - 15px);
+}
+
+/* animaciones */
+/* footer */
+.pieDePagina {
+  width: 100%;
+  height: 90px;
+  background-color: #D8BD8A;
+  position: absolute;
+  bottom: 0;
+}
+
+.pieDePagina .c1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pieDePagina .c1 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.pieDePagina .c1 h2 {
+  color: #772014;
+  font-size: medium;
+}
+
+.pieDePagina .c1 ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+@media (min-width: 480px) {
+  .pieDePagina .pieDePagina {
+    width: 100%;
+    height: 300px;
+  }
+  .pieDePagina .pieDePagina .c1 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto slab";
+  line-height: 20px;
+  background-color: #D8BD8A;
+}
+
+body a {
+  text-decoration: none;
+  color: #772014;
+}
+
+body h1 {
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 2px;
+  margin-bottom: 3px;
+}
+
+body .caja {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #D8BD8A;
+}
+
+body .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body .video-container video {
+  min-height: 100%;
+  min-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body a {
+  background-color: #D8BD8A;
+}
+
+body .video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body .content {
+  z-index: 1;
+}
+
+body {
+  background-color: #2A2D43;
+}
+
+body h2 {
+  font: "Roboto slab";
+  color: #D3D0CB;
+  margin: 10px;
+  padding: 10px;
+}
+
+.galeria {
+  height: 80vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  gap: 20px;
+}
+
+.galeria .Ficha {
+  width: 400px;
+  height: 350px;
+  border: solid 1px darkblue;
+  border-radius: 5px;
+  background-color: #D8BD8A;
+}
+
+.galeria .Ficha img {
+  justify-content: center;
+  align-content: center;
+  width: 399px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.galeria .Ficha h6 {
+  color: #772014;
+  font-family: "Roboto";
+  align-self: center;
+  text-decoration: underline;
+}
+
+.galeria .Ficha p {
+  color: #772014;
+}
+
+.galeria .Ficha button {
+  position: absolute;
+  border: solid 2px black;
+  background-color: #D3D0CB;
+  position: absolute;
+  align-self: center;
+  bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .galeria .galeria {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .galeria .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1fr;
+    gap: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .galeria .galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1fr;
+    gap: 50px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1400px) {
+  .galeria .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1fr;
+    gap: 60px;
+  }
+}
+.box {
+  display: grid;
+  grid-template-areas: "empresa empresa lateral" "articulo articulo lateral" "footer footer lateral";
+  grid-template-rows: repeat(3fr);
+  grid-template-columns: repeat(3fr);
+  height: 100vh;
+  row-gap: 3px;
+  -moz-column-gap: 3px;
+  column-gap: 3px;
+}
+
+.box .empresa {
+  grid-area: empresa;
+  background-color: wheat;
+  border: solid 3px black;
+}
+
+.box .lateral {
+  grid-area: lateral;
+  background-color: wheat;
+  border: solid 3px black;
+}
+
+.box .lateral div, .box .lateral img {
+  -moz-column-gap: 60px;
+  column-gap: 60px;
+  width: 180px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.box .articulo {
+  grid-area: articulo;
+  background-color: wheat;
+  border: solid 3px black;
+}
+
+.box .footer {
+  grid-area: footer;
+  background-color: wheat;
+  border: solid 3px black;
+}
+
+.form {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form button {
+  width: 150px;
+  height: 50px;
+  border: 3px solid #D8BD8A;
+  color: #D8BD8A;
+}
+
+.form .cajaform-1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100px;
+  border: 3px solid #D8BD8A;
+}
+
+.form .cajaform-1 input {
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8BD8A;
+  margin: 10px;
+}
+
+.form .cajaform-1 label {
+  color: #D8BD8A;
+}
+
+.form .cajaform-2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100px;
+  border: 3px solid #D8BD8A;
+}
+
+.form .cajaform-2 input {
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8BD8A;
+  margin: 10px;
+}
+
+.form .cajaform-2 label {
+  color: #D8BD8A;
+}
+
+.form .cajaform-3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100px;
+  border: 3px solid #D8BD8A;
+}
+
+.form .cajaform-3 input {
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8BD8A;
+  margin: 10px;
+}
+
+.form .cajaform-3 label {
+  color: #D8BD8A;
+}
+
+.form .cajaform-4 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100px;
+  border: 3px solid #D8BD8A;
+}
+
+.form .cajaform-4 input {
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8BD8A;
+  margin: 10px;
+}
+
+.form .cajaform-4 label {
+  color: #D8BD8A;
+}
+
+.form .cajaform3 {
+  width: 250px;
+  height: 300px;
+}
+
+.form .cajaform3 textarea {
+  width: 200px;
+  height: 120px;
+  background-color: #D8BD8A;
+}
+
+.form .cajaform3 .cajaform4 {
+  width: 250px;
+  height: 350px;
+  color: red;
+}
+
+.form .cajaform3 .formulario {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) and (min-width: 1400px) {
+  .form .formulario {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+} 
+
+/*# sourceMappingURL=styles.css.map */

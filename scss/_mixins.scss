@@ -1,0 +1,70 @@
+@mixin seteoInicial{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ 
+
+}
+
+@mixin margins($margin,$pading){
+    margin: $margin;
+    padding: $pading;
+}
+
+
+
+
+
+@mixin flexible($display,$direccion,$corte,$just,$alin){
+    display: $display;
+    flex-flow: $direccion $corte;
+    justify-content: $just;
+    align-items: $alin;
+
+}
+
+@mixin grilla($columnas,$espacio){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap:$espacio;
+}
+
+
+
+
+@mixin bordes($borde,$color){
+    border:$borde;
+    color: $color;
+
+}
+
+@mixin medidas($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin neop($radio,$eje){
+    border-radius: $radio;
+    background-color: color_1d;
+    box-shadow: $eje $eje ($eje*2) $color_1,
+                 (-$eje)(-$eje) ($eje*2) $color_2 ;
+
+}
+
+
+@mixin responsive($resp ){
+    width: $resp;
+    @media screen and (max-width: $resp ){
+        @content;
+    }
+
+}
+
+
+@mixin areaGrilla($area,$espacio){
+    display: grid;
+    grid-template-areas: $area;
+    gap: $espacio
+}
+
+

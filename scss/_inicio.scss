@@ -1,0 +1,214 @@
+
+
+
+/*barra de navegacion y header*/
+header{
+    @include flexible(flex,row,wrap,center,center);
+    gap: $me;
+    background-color: $color_1;
+      .logo{ 
+    @include flexible(flex,row,wrap, start, center);
+          img{
+            border-radius: 50%;
+            @include medidas(45px,45px); 
+        
+     }
+     & h4{
+        color: $color_2d;
+         }
+
+    }
+    .barra{
+        @include flexible(flex,row,wrap,end,end);
+         
+        a{
+            color: $color_2d;
+            font-weight: 20%;
+        }
+        &:hover{
+            color: $color_3;
+            
+        }
+        &:visited{
+            color: $color_3fuente;
+        }
+    }
+
+
+
+    @media (max-width: $movil ) {
+                .barra {
+                    @include flexible(flex,column,wrap,end,end);
+                gap: $sm;
+                a{ 
+                    font-size:small;
+                    gap: $ssm;
+                }
+
+                }   
+        
+ }
+    @media (min-width: $movil  ) and (max-width: $tablet) {
+        .barra{
+            gap: $me;
+            @include flexible( flex,row,wrap, end,end);
+            a{
+                font-size: medium;
+                gap: $me;
+
+            }
+        }
+
+    @media (min-width: $laptop ) 
+    {
+        header{
+            @include flexible(flex,row,wrap,start,start);
+        
+            gap:$slar;
+
+            .barra{
+                gap:$slar;
+                @include flexible( flex,row,wrap, end,end);
+                a{
+                    font-size: larger;
+                }
+                
+            }
+
+        }
+        }
+    }
+}
+
+
+
+
+.principal{
+    height: calc(100vh - 120px - 15px );
+}
+
+
+
+
+
+/* animaciones */
+
+/* footer */
+
+.pieDePagina{
+   @include medidas(100%, 90px);
+ background-color: $color_1;
+ position: absolute;
+ bottom: 0;
+ .c1{
+    @include flexible(flex,row,wrap,center,center);
+      & img{
+        @include medidas(45px,45px);
+        border-radius: 50%;
+           }
+      & h2{
+        color: $color_2d;
+        font-size: medium;
+    }
+    
+    & ul{
+        @include flexible(flex,row,wrap,center,center);
+        list-style: none;
+       }
+ }
+@media (min-width:$movil) {
+    .pieDePagina{
+        @include medidas (100%, 300px);
+        .c1{
+            @include flexible(flex,column,wrap,center,center);
+
+        }
+    }
+    
+    
+}
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+

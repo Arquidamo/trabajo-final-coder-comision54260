@@ -1,0 +1,41 @@
+.box{
+    
+    display: grid;
+    grid-template-areas: 
+    "empresa empresa lateral"
+    "articulo articulo lateral"
+    "footer footer lateral";
+    grid-template-rows: repeat(3*1fr );
+    grid-template-columns: repeat(3*1fr);
+    height: 100vh;
+    row-gap: $ssm;
+    column-gap: $ssm;
+    
+ .empresa{
+     grid-area: empresa;
+         background-color: wheat;
+        border: solid 3px black;
+ }
+ .lateral{
+         grid-area: lateral;
+         
+         background-color: wheat;
+         border: solid 3px black;
+         div, img{
+            column-gap: $slar;
+            @include medidas(180px,100px);
+            border-radius: $me;
+     }
+
+        }
+        .articulo{
+        grid-area: articulo;
+        background-color: wheat;
+        border: solid 3px black;
+        }
+        .footer{
+        grid-area: footer;
+        background-color: wheat;
+        border: solid 3px black;
+     }
+    }

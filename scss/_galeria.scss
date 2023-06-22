@@ -1,0 +1,114 @@
+body{
+    h2{
+        font:"Roboto slab";
+        color: $color_2;
+        @include margins( $sm,$sm);
+    
+
+    }
+    background-color: $color_3fuente;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+.galeria{
+    height: 80vh;
+    @include flexible(flex,row,wrap,center,center);
+    inset: 0;
+    gap:$me;
+    .Ficha{
+            @include medidas(400px,350px);
+            border: solid 1px darkblue;
+            border-radius: 5px;
+            background-color: $color_1;
+            img{
+                justify-content: center;
+                align-content: center;
+                @include medidas(399px,200px);
+                overflow: hidden;
+             border-radius: $sm;
+
+           }
+           h6{
+            color: $color_2d;
+            font-family: "Roboto";
+            align-self:center;
+              text-decoration: underline;
+           }
+           p{
+            color: $color_2d;
+           }
+           button{
+            position:absolute;
+               border: solid 2px black;
+               background-color: $color_2; 
+               position: absolute; 
+               align-self: center;     
+               bottom: 0;
+            }
+    }
+    @media  ( max-width:$movil){
+.galeria{
+    @include flexible(flex,column,nowrap,start,start);
+}        
+        
+    }
+    @media (min-width:$movil) and (max-width:$tablet){
+        .galeria{
+            @include grilla(2,1fr);
+            gap:$lar;
+        }
+    }
+    @media (min-width:$tablet)and (max-width:$laptop){
+.galeria{
+    @include grilla(3,1fr);
+    gap:$lar;
+
+        }
+    }
+    @media (min-width:$laptop) and (max-width:$pc){
+        .galeria{
+            @include grilla(4,1fr);
+            gap:$slar;
+
+        }
+} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
