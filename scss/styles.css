@@ -81,73 +81,150 @@ header .barra:visited {
   }
 }
 @media (min-width: 480px) and (max-width: 768px) and (min-width: 900px) {
-  header header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: start;
-    align-items: start;
-    gap: 60px;
-  }
-  header header .barra {
-    gap: 60px;
+  header .barra {
     display: flex;
     flex-flow: row wrap;
     justify-content: end;
     align-items: end;
   }
-  header header .barra a {
+  header .barra a {
     font-size: larger;
+    gap: 60px;
   }
 }
 
 .principal {
-  height: calc(100vh - 120px - 15px);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-color: #D3D0CB;
+}
+.principal .caja-anim {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #772014;
+  border-radius: 50%;
+  background-image: -webkit-radial-gradient(red, black);
+  animation-name: pulsar;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 3.5s;
+}
+@keyframes pulsar {
+  0% {
+    transform: scale(0.85);
+    background-image: -webkit-gradient(yellow, white);
+  }
+  15% {
+    transform: scale(1.1);
+    background-image: -webkit-gradient(orange, black);
+  }
+  25% {
+    transform: scale(1.2);
+    background-image: -webkit-gradient(yellow, red);
+  }
+  50% {
+    transform: scale(0.9);
+    background-image: -webkit-gradient(red, black);
+  }
+  75% {
+    transform: scale(1.4);
+    background-image: -webkit-gradient(red, orange);
+  }
+  99% {
+    transform: scale(0.5);
+    background-image: -webkit-gradient(yellow, black);
+  }
 }
 
 /* animaciones */
 /* footer */
 .pieDePagina {
-  width: 100%;
-  height: 90px;
   background-color: #D8BD8A;
   position: absolute;
   bottom: 0;
+  width: 100%;
+  height: 80px;
 }
-.pieDePagina .c1 {
+.pieDePagina .cfooter {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-.pieDePagina .c1 img {
-  width: 45px;
-  height: 45px;
+.pieDePagina .cfooter img {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
-.pieDePagina .c1 h2 {
-  color: #772014;
+.pieDePagina h2 {
   font-size: medium;
+  color: #772014;
 }
-.pieDePagina .c1 ul {
+.pieDePagina ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   list-style: none;
+  gap: 3px;
 }
-@media (min-width: 480px) {
-  .pieDePagina .pieDePagina {
-    width: 100%;
-    height: 300px;
-  }
-  .pieDePagina .pieDePagina .c1 {
+.pieDePagina ul a {
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: all 5ms ease-in;
+}
+.pieDePagina ul a:hover {
+  transform: scale(1.4);
+}
+@media (max-width: 480px) {
+  .pieDePagina .pieDePagina .cfooter {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
   }
+  .pieDePagina h2 {
+    font-size: small;
+    color: yellow;
+  }
 }
 
+@media (min-width: 480px) and (max-width: 768px) {
+  .pieDePagina {
+    width: 100%;
+    height: 50px;
+  }
+  .pieDePagina .cfooter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .pieDePagina h2 {
+    font-size: medium;
+    color: red;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .pieDePagina {
+    width: 100%;
+    height: 50px;
+  }
+  .pieDePagina .cfooter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .pieDePagina h2 {
+    font-size: large;
+    color: black;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -164,10 +241,10 @@ body a {
   color: #772014;
 }
 body h1 {
-  font-weight: 300;
+  font-weight: 200;
   font-size: 50px;
   line-height: 2px;
-  margin-bottom: 3px;
+  margin-bottom: 20px;
 }
 body .caja {
   position: relative;

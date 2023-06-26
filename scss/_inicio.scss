@@ -61,21 +61,18 @@ header{
 
     @media (min-width: $laptop ) 
     {
-        header{
-            @include flexible(flex,row,wrap,start,start);
+       
         
-            gap:$slar;
-
-            .barra{
-                gap:$slar;
-                @include flexible( flex,row,wrap, end,end);
-                a{
-                    font-size: larger;
+        .barra{
+            
+            @include flexible( flex,row,wrap, end,end);
+            a{
+                font-size: larger;
+                gap: $slar;
                 }
-                
+                        
             }
-
-        }
+        
         }
     }
 }
@@ -84,8 +81,61 @@ header{
 
 
 .principal{
-    height: calc(100vh - 120px - 15px );
+    @include flexible(flex,row,wrap,center,center);
+      @include medidas(100%,300px);
+      background-color: $color_2;
+      .caja-anim{
+        @include medidas(150px,150px);
+        border: $ssm solid $color_2d;
+        border-radius: 50%;
+        background-image: -webkit-radial-gradient(red, black);
+        animation-name: pulsar;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 3.5s;
+
+
+       
+
+        @keyframes pulsar {
+            0%{
+                transform: scale(0.85);
+                background-image: -webkit-gradient(yellow,white);
+            }
+            15%{
+                transform: scale(1.1);
+                background-image: -webkit-gradient(orange, black);
+            }
+            25%{
+                transform: scale(1.2);
+                background-image: -webkit-gradient(yellow,red);
+            }
+            50%{
+                transform: scale(0.9);
+                background-image: -webkit-gradient(red,black);
+            }
+            75%{
+                transform: scale(1.4);
+                background-image: -webkit-gradient(red,orange);
+            }
+            99%{
+                transform: scale(0.5);
+                background-image: -webkit-gradient(yellow,black);
+            }
+        }
+
+        
+
+        
+
+
+      }
+
+
+
 }
+
+
 
 
 
@@ -96,39 +146,96 @@ header{
 /* footer */
 
 .pieDePagina{
-   @include medidas(100%, 90px);
- background-color: $color_1;
- position: absolute;
- bottom: 0;
- .c1{
-    @include flexible(flex,row,wrap,center,center);
-      & img{
-        @include medidas(45px,45px);
-        border-radius: 50%;
-           }
-      & h2{
-        color: $color_2d;
-        font-size: medium;
+    background-color: $color_1;
+    position: absolute;
+    bottom: 0;
+    @include medidas(100%,80px);
+    & .cfooter{
+        @include flexible(flex,row,wrap,center,center);
+        img{
+            @include medidas(30px,30px);
+            border-radius: 50%;
+        }
     }
-    
+    & h2{
+        font-size: medium;
+        color: $color_2d;
+    }
+
     & ul{
         @include flexible(flex,row,wrap,center,center);
         list-style: none;
-       }
- }
-@media (min-width:$movil) {
-    .pieDePagina{
-        @include medidas (100%, 300px);
-        .c1{
-            @include flexible(flex,column,wrap,center,center);
+        gap: $ssm;
+        & a{
+             border-radius: 50%;
+             box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: .7) ;
+             transition: all 5ms ease-in ;
+        }
+        & a:hover{
+            transform: scale(1.4);
 
         }
-    }
-    
-    
-}
 
- }
+    }
+    @media (max-width:$movil)  {
+        .pieDePagina{
+            & .cfooter{
+                @include flexible(flex,column,wrap,center,center);
+            }
+        }
+            & h2{
+                font-size: small;
+                color: yellow;
+            
+            }
+        }
+    }
+
+    @media (min-width: $movil) and (max-width: $tablet) {
+        .pieDePagina{
+            @include medidas(100%,50px);
+            & .cfooter{
+                @include flexible(flex,row,wrap,center,center);
+            }
+            & h2{
+                font-size: medium;
+                color: red;
+            }
+          }
+      
+        }
+
+        @media (min-width: $tablet) and (max-width: $pc) {
+            .pieDePagina{
+                @include medidas(100%,50px);
+                & .cfooter{
+                    @include flexible(flex,row,wrap,center,center);
+                }
+                & h2{
+                    font-size: large;
+                    color: black;
+                }
+              }
+          
+            }
+
+        
+        
+            
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
